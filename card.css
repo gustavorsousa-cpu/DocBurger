@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.hero{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #272727;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card{
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardapio h2{
+    font-size: 28px;
+    color: #272727;
+    margin-bottom: 25px;
+    border-left: 5px solid #E9190F;
+    padding-left: 12px;
+}
+.card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.cardapio{
+    padding: 40px 40px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-info{
+    padding: 18px 20px 22px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-info h3{
+    font-size: 20px;
+    color: #272727;
+    margin: 0 0 10px;
+}
+
+.card-info p{
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    margin: 0 0 15px;
+    max-width: none;
+    flex: 1;
+}
+
+.card-info .preco{
+    font-size: 18px;
+    font-weight: bold;
+    color: #E9190F;
+    margin: 0;
+}
+
+@media (max-width: 768px){
+    .exemplo-categoria{
+        padding: 30px 20px 40px;
+    }
+
+    .grid{
+        gap: 20px;
+    }
+
+    .card img{
+        height: 180px;
+    }
+}
